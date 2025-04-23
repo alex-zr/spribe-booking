@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+  <changeSet id="0001-create-tables" author="oroshchupkin" failOnError="true">
+    <sql>
+
+      create table public.user_ (
+        id SERIAL PRIMARY KEY,
+        name varchar(50),
+        username varchar(50) not null,
+        surname varchar(50)
+      );
+
+
+      create table public.unit (
+        id         SERIAL PRIMARY KEY,
+        description           VARCHAR(255),
+        number_of_rooms     INTEGER      NOT NULL,
+        available_start_date      TIMESTAMP    NOT NULL,
+        available_end_date        TIMESTAMP    NOT NULL,
+        booking_date        TIMESTAMP,
+        accommodation_type VARCHAR(25) NOT NULL,
+        cost NUMERIC(19,2),
+        cost_with_fee NUMERIC(19,2),
+        unit_flor INT NOT NULL,
+        user_id     INTEGER,
+        booked BOOLEAN,
+        CONSTRAINT UNIT_USER_FK FOREIGN KEY (user_id) REFERENCES public.user_ (id)
+      );
+
+      create table public.payment (
+        id SERIAL PRIMARY KEY,
+        amount NUMERIC(19,2),
+        unit_id     INTEGER,
+        user_id     INTEGER,
+        created_at      TIMESTAMP,
+        CONSTRAINT PAYMENT_UNIT_FK FOREIGN KEY (unit_id) REFERENCES public.unit (id),
+        CONSTRAINT PAYMENT_USER_FK FOREIGN KEY (user_id) REFERENCES public.user_ (id)
+      );
+
+    </sql>
+
+  </changeSet>
+</databaseChangeLog>

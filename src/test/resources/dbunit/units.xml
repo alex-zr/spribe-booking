@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<dataset>
+    <unit
+      id="1100"
+      available_start_date="2020-01-18 00:00:00 +0000"
+      available_end_date="2021-01-18 00:00:00 +0000"
+      accommodation_type="HOME"
+      number_of_rooms="2"
+      cost="100"
+      cost_with_fee="115"
+      unit_flor="0"
+      description="desc"
+      booked="false"/>
+    <unit
+      id="1101"
+      available_start_date="2020-01-18 00:00:00 +0000"
+      available_end_date="2021-01-18 00:00:00 +0000"
+      accommodation_type="HOME"
+      number_of_rooms="2"
+      cost="100"
+      cost_with_fee="115"
+      unit_flor="0"
+      description="desc"
+      booked="false"/>
+    <unit
+      id="1102"
+      available_start_date="2024-01-18 17:00:00 +0000"
+      available_end_date="2025-01-18 17:00:00 +0000"
+      accommodation_type="HOME"
+      number_of_rooms="2"
+      cost="200"
+      cost_with_fee="225"
+      unit_flor="3"
+      description="desc"
+      booked="false"/>
+    <unit
+      id="1103"
+      available_start_date="2020-01-18 00:00:00 +0000"
+      available_end_date="2021-01-18 00:00:00 +0000"
+      accommodation_type="FLAT"
+      number_of_rooms="5"
+      cost="100"
+      cost_with_fee="115"
+      unit_flor="0"
+      description="besc123"
+      booked="true"/>
+
+</dataset>

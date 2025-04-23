@@ -1,0 +1,20 @@
+
+spring:
+  datasource:
+    hikari:
+      maximum-pool-size: 3
+      schema: public
+  jpa:
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+
+  liquibase:
+    enabled: true
+    change-log: db.changelog/changelog-v1.0.xml
+  autoconfigure:
+    exclude: org.springframework.boot.actuate.autoconfigure.tracing.zipkin.ZipkinAutoConfiguration
+  threads:
+    virtual:
+      enabled: true

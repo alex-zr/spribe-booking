@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+  <changeSet id="0002-add-units" author="oroshchupkin" failOnError="true">
+    <sql>
+
+      insert into public.unit (available_start_date, available_end_date, booking_date, number_of_rooms, accommodation_type, cost, cost_with_fee, unit_flor, description, booked)
+      values
+        ('2022-07-18 11:30:18', '2025-07-18 11:30:18', '2022-07-18 11:30:18', 1, 'HOME', 300, 315, 1, 'desc', true),
+        ('2022-07-18 11:30:18', '2025-07-18 11:30:18', '2022-07-18 11:30:18', 1, 'HOME', 300, 315, 1, 'desc', true),
+        ('2022-07-18 11:30:18', '2025-07-18 11:30:18', '2022-07-18 11:30:18', 1, 'HOME', 300, 315, 1, 'desc', true),
+        ('2022-07-18 11:30:18', '2025-07-18 11:30:18', '2022-07-18 11:30:18', 1, 'HOME', 300, 315, 1, 'desc', true),
+        ('2022-07-18 11:30:18', '2025-07-18 11:30:18', '2022-07-18 11:30:18', 1, 'HOME', 300, 315, 1, 'desc', true),
+        ('2022-07-18 11:30:18', '2025-07-18 11:30:18', '2022-07-18 11:30:18', 1, 'HOME', 300, 315, 1, 'desc', true),
+        ('2022-07-18 11:30:18', '2025-07-18 11:30:18', '2022-07-18 11:30:18', 1, 'HOME', 300, 315, 1, 'desc', true),
+        ('2022-07-18 11:30:18', '2025-07-18 11:30:18', '2022-07-18 11:30:18', 1, 'HOME', 300, 315, 1, 'desc', true),
+        ('2022-07-18 11:30:18', '2025-07-18 11:30:18', '2022-07-18 11:30:18', 1, 'HOME', 300, 315, 1, 'desc', true),
+        ('2022-07-18 11:30:18', '2025-07-18 11:30:18', '2022-07-18 11:30:18', 1, 'HOME', 300, 315, 1, 'desc', true);
+
+    </sql>
+
+  </changeSet>
+</databaseChangeLog>
